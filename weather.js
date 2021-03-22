@@ -29,6 +29,8 @@ const JSON = function () {
             "x-rapidapi-host": "community-open-weather-map.p.rapidapi.com"
         }
     }).then(res => {
+        if (!res.ok)
+            throw new Error(`City not found (${res.status})`);
         console.log(res);
         return res.json();
     }).then(function (data) {
@@ -67,8 +69,6 @@ const whereAmI = function () {
                 }
             })
                 .then(response => {
-                    if (!response.ok)
-                        throw new Error(`City not found (${response.status})`)
                     return response.json();
                 })
                 .then(data => {
@@ -80,8 +80,8 @@ const whereAmI = function () {
 }
 btn.addEventListener('click', whereAmI);
 btnInput.addEventListener('click', JSON);
-   
-    
+
+
 
 
 
