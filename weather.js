@@ -14,7 +14,7 @@ const renderCountry = function (data) {
                 <p class="city__row">Temperature: ${Math.trunc(data.main.temp - 273.15)}°C</p> 
                 <p class="city__row">Feels like: ${Math.trunc(data.main.feels_like - 273.15)}°C</p>
                 <p class="city__row"><span>Weather: </span>${data.weather[0].main}<img src="http://openweathermap.org/img/wn/${iconCode}.png"> </p>
-                <p class="city__row">Wind speed: ${data.wind.speed}</p>
+                <p class="city__row">Wind speed: ${data.wind.speed}km/h</p>
             </div>
         </article>`;
 
