@@ -68,7 +68,7 @@ const whereAmI = function () {
             })
                 .then(response => {
                     if (!response.ok)
-                        throw new Error(`Country not found (${response.status})`)
+                        throw new Error(`City not found (${response.status})`)
                     return response.json();
                 })
                 .then(data => {
